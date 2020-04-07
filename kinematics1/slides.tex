@@ -1,6 +1,11 @@
 % the sample slide is created with 16:9 aspect ratio
 \documentclass[aspectratio=169]{beamer}
 
+\usepackage{mathpazo}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[makeroom]{cancel}
+
 \usetheme{saarland}
 
 % the background and logo are in the images directory
@@ -17,7 +22,77 @@
 	\begin{frame}{Problem 15}
 		A bullet of mass \(m\) and velocity \(v_0\) is fired toward a block of mass \(4m\). The block is initially at rest on a frictionless horizontal surface. The bullet penetrates the block and emerges with a velocity of \(\frac{v_0}{3}\)
 		\begin{center}
-			\input{figs/diagram_start.tex}
+			\only<1>{\input{figs/diagram_1.tex}}
+			\only<2>{\input{figs/diagram_2.tex}}
+			\only<3>{\input{figs/diagram_3.tex}}
 		\end{center}
+
+		\begin{enumerate}[a)]
+			\item Determine the final speed of the block.
+			\item Determine the loss in kinetic energy of the bullet.
+			\item Determine the gain in the kinetic energy of the block.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Problem 15}
+		\begin{enumerate}[a)]
+			\item Determine the final speed of the block.
+		\end{enumerate}
+		\begin{center}
+			\input{figs/diagram_3.tex}
+		\end{center}
+		\begin{align*}
+			\onslide<2->{m_A v_A + \alt<3>{\cancel{m_B v_B}}{m_B v_B} &= m_A v_A' + m_B v_B' \\} 
+			\onslide<4->{m v_0 &= m(\frac{v_0}{3}) + (4m)v_B' \\}
+			\onslide<5->{\alt<5>{\cancel{m}}{m}v_0 - \frac{\alt65>{\cancel{m}}{m}v_0}{3} &= 4\alt<6>{\cancel{m}}{m}v_B' \\}
+			\onslide<7->{v_B' &= \frac{1}{4}(v_0 - \frac{v_0}{3}) \\}
+			\onslide<8->{\Aboxed{v_B' &= \frac{v_0}{6}}}
+		\end{align*}
+	\end{frame}
+
+	\begin{frame}{Problem 15}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{1}
+			\item Determine the loss in kinetic energy of the bullet.
+		\end{enumerate}
+		\begin{equation*}
+			\onslide<2->{K = \frac{1}{2}mv^2}
+		\end{equation*}
+		\vskip -2em
+		\begin{columns}
+			\column{0.5\textwidth}
+			\begin{align*}
+				\onslide<3->{\Aboxed{K_A &= \frac{1}{2} mv_0^2} \\}
+				\onslide<4->{K_A' &= \frac{1}{2}mv_A' \\}
+				\onslide<5->{ &= \frac{1}{2}m\left(\frac{v_0}{3}\right)^2 \\}
+				\onslide<6->{\Aboxed{K_A' &= \frac{mv_0^2}{18}}}
+			\end{align*}
+
+			\column{0.5\textwidth}
+			\begin{center}
+				\input{figs/diagram_3.tex}
+			\end{center}
+			\begin{align*}
+				\onslide<7->{\Delta K_A &= K_A' - K_A \\}
+				\onslide<8->{&= \frac{1}{18}mv_0^2 - \frac{1}{2}mv_0^2 \\}
+				\onslide<9->{\Aboxed{\Delta K_A &= -\frac{4}{9}mv_0^2}}
+			\end{align*}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Problem 15}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{2}
+			\item Determine the gain in the kinetic energy of the block.
+		\end{enumerate}
+		\begin{center}
+			\input{figs/diagram_3.tex}
+		\end{center}
+		\begin{align*}
+			\onslide<2->{K_B &= 0 \\}
+			\onslide<3->{K_B' &= \frac{1}{2}m_B v_B^2 \\}
+			\onslide<4->{&= \frac{1}{2}(4m)\left(\frac{v_0}{3}\right)^2 = \frac{1}{18}mv^2_0 \\}
+			\onslide<5->{\Aboxed{\Delta K_B &= K_B' - K_B = \frac{1}{18}mv^2_0}}
+		\end{align*}
 	\end{frame}
 \end{document}
