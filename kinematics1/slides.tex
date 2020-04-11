@@ -42,9 +42,11 @@
 			\input{figs/diagram_3.tex}
 		\end{center}
 		\begin{align*}
-			\onslide<2->{m_A v_A + \alt<3>{\cancel{m_B v_B}}{m_B v_B} &= m_A v_A' + m_B v_B' \\} 
+			\only<2>{m_A v_A + m_B v_B &= m_A v_A' + m_B v_B' \tag{Conservation of Momentum} \\}
+			\onslide<3->{m_A v_A + \cancel{m_B v_B} &= m_A v_A' + m_B v_B' \\}
 			\onslide<4->{m v_0 &= m(\frac{v_0}{3}) + (4m)v_B' \\}
-			\onslide<5->{\alt<5>{\cancel{m}}{m}v_0 - \frac{\alt65>{\cancel{m}}{m}v_0}{3} &= 4\alt<6>{\cancel{m}}{m}v_B' \\}
+			\only<5>{mv_0 - \frac{mv_0}{3} &= 4mv_B' \\}
+			\onslide<6->{\cancel{m}v_0 - \frac{\cancel{m}v_0}{3} &= 4\cancel{m}v_B' \\}
 			\onslide<7->{v_B' &= \frac{1}{4}(v_0 - \frac{v_0}{3}) \\}
 			\onslide<8->{\Aboxed{v_B' &= \frac{v_0}{6}}}
 		\end{align*}
@@ -63,7 +65,7 @@
 			\column{0.5\textwidth}
 			\begin{align*}
 				\onslide<3->{\Aboxed{K_A &= \frac{1}{2} mv_0^2} \\}
-				\onslide<4->{K_A' &= \frac{1}{2}mv_A' \\}
+				\onslide<4->{K_A' &= \frac{1}{2}mv_A'^2 \\}
 				\onslide<5->{ &= \frac{1}{2}m\left(\frac{v_0}{3}\right)^2 \\}
 				\onslide<6->{\Aboxed{K_A' &= \frac{mv_0^2}{18}}}
 			\end{align*}
@@ -90,8 +92,8 @@
 		\end{center}
 		\begin{align*}
 			\onslide<2->{K_B &= 0 \\}
-			\onslide<3->{K_B' &= \frac{1}{2}m_B v_B^2 \\}
-			\onslide<4->{&= \frac{1}{2}(4m)\left(\frac{v_0}{3}\right)^2 = \frac{1}{18}mv^2_0 \\}
+			\onslide<3->{K_B' &= \frac{1}{2}m_B v_B'^2 \\}
+			\onslide<4->{&= \frac{1}{2}(4m)\left(\frac{v_0}{6}\right)^2 = \frac{1}{18}mv^2_0 \\}
 			\onslide<5->{\Aboxed{\Delta K_B &= K_B' - K_B = \frac{1}{18}mv^2_0}}
 		\end{align*}
 	\end{frame}
