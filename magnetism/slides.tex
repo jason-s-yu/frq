@@ -1,0 +1,85 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{mathpazo}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[makeroom]{cancel}
+\usepackage{siunitx}
+
+\usetheme{saarland}
+
+\graphicspath{{figs/}}
+
+\author{Jason Yu}
+\title{AP Magnetism Review}
+\subtitle{Worked problem 9}
+\institute{University HS}
+\date{\today}
+
+\begin{document}
+	\begin{frame}{Problem 9}
+		Your research director has assigned you to set up the laboratory's mass spectrometer so that it will separate strontium ions having a net charge of \(+2e\) from a beam of mixed ions. The spectrometer above accelerates a beam of ions from rest through a potential difference \(\epsilon\), after which the beam enters a region containing a uniform magnetic field \(\vec{B}\) of constant magnitude and perpendicular to the plane of the path of the ions. The ions leave the spectrometer at a distance \(x\) from the entrance point. You can manually change \(\epsilon\).
+
+		\begin{enumerate}[a)]
+			\item In what direction must \(\vec{B}\) point to produce the trajectory of the ions shown?
+			\item The ions travel at constant speed around the semicircular path. Explain why the speed remains constant.
+			\item Calculate the speed of the ions with charge \(+2e\) that exist at distance \(x\).
+			\item Calculate the accelerating voltage \(\epsilon\) needed for the ions with charge \(+2e\) to attain the speed you calculated in part c.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Problem 9}
+		\begin{enumerate}[a)]
+			\item In what direction must \(\vec{B}\) point to produce the trajectory of the ions shown?
+		\end{enumerate}
+
+		\begin{itemize}
+			\item The particle goes towards the left, so a force must be acting upon it towards the left
+			\item Thumb towards left and index finger directs upward (in direction of particle's velocity)
+		\end{itemize}
+
+		\begin{equation*}
+			\onslide<2->\boxed{\text{Into the page}}
+		\end{equation*}
+	\end{frame}
+
+	\begin{frame}{Problem 9}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{1}
+			\item The ions travel at constant speed around the semicircular path. Explain why the speed remains constant.
+		\end{enumerate}
+
+		\begin{equation*}
+			\onslide<2->\boxed{\text{Force is perpendicular to } \vec{v} \text{ so it does no work}}
+		\end{equation*}
+	\end{frame}
+
+	\begin{frame}{Problem 9}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{2}
+			\item Calculate the speed of the ions with charge \(+2e\) that exist at distance \(x\).
+		\end{enumerate}
+
+		\begin{align*}
+			\onslide<2->{\frac{mv^2}{R} &= qvB \\}
+			\onslide<3->{\frac{mv}{x/2} &= qB \\}
+			\onslide<4->{v &= \frac{qBx}{2m} \\}
+			\onslide<4->{v &= \frac{(2e)(\SI{0.070}{\tesla})(\SI{1.35}{\meter})}{2(\SI{1.45E-25}{\kilo\gram})} \\}
+			\onslide<5->{\Aboxed{v &= \SI{1.04E5}{\meter/\second}}}
+		\end{align*}
+	\end{frame}
+
+	\begin{frame}{Problem 9}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{3}
+			\item Calculate the accelerating voltage \(\epsilon\) needed for the ions with charge \(+2e\) to attain the speed you calculated in part c.
+		\end{enumerate}
+
+		\begin{align*}
+			\onslide<2->{q\epsilon &= \frac{1}{2}mv^2 \\}
+			\onslide<3->{\epsilon &= \frac{mv^2}{2q} \\}
+			\onslide<4->{\epsilon &= \frac{(\SI{1.45E-25}{\kilo\gram})(\SI{1.04E5}{\meter/\second})^2}{4e} \\}
+			\onslide<5->{\Aboxed{\epsilon &= \SI{2400}{\volt}}}
+		\end{align*}
+	\end{frame}
+\end{document}

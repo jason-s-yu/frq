@@ -1,0 +1,97 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{mathpazo}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[makeroom]{cancel}
+\usepackage{siunitx}
+
+\usetheme{saarland}
+
+\graphicspath{{figs/}}
+
+\author{Jason Yu}
+\title{AP Thermodynamics Review}
+\subtitle{Worked problem 13}
+\institute{University HS}
+\date{\today}
+
+\begin{document}
+	\begin{frame}{Problem 13}
+		An ideal gas undergoes the cyclic process \(A \to B \to C \to A\) as shown in the diagram.
+
+		\begin{enumerate}[a)]
+			\item Rank the temperature of the gas at states \(A\), \(B\), and \(C\) from highest to lowest. If two or more states have the same temperature, state that in your ranking. Justify your answer.
+			\item For each of the thermodynamic variables \(\Delta U\), \(Q\), and \(W\), indicate whether the variable is positive, negative, or zero for the process \(A \to B\) only. Justify your answer.
+			\item Determine how much work, if any, was done on the process \(A \to B\).
+			\item Determine how much heat, if any, was added to the gas in the process \(A \to B\).
+			\item In the entire process \(A \to B \to C \to A\), was heat added or removed from the gas, or neither?
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Problem 13}
+		\begin{enumerate}[a)]
+			\item Rank the temperature of the gas at states \(A\), \(B\), and \(C\) from highest to lowest. If two or more states have the same temperature, state that in your ranking. Justify your answer.
+		\end{enumerate}
+
+		\begin{align*}
+			\onslide<2->{T_A \approx P_AV_A = (\SI{5.0E5}{\pascal})(\SI{0.010}{\meter^3}) &= \SI{5000}{\joule} \\}
+			\onslide<3->{T_B \approx (\SI{1.0E5}{\pascal})(\SI{0.050}{\meter^3}) &= \SI{5000}{\joule} \\}
+			\onslide<4->{T_C \approx (\SI{1.0E5}{\pascal})(\SI{0.010}{\meter^3}) &= \SI{1000}{\joule}}
+		\end{align*}
+
+		\begin{equation*}
+			\onslide<5->\boxed{T_A = T_B > T_C}
+		\end{equation*}
+	\end{frame}
+
+	\begin{frame}{Problem 13}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{1}
+			\item For each of the thermodynamic variables \(\Delta U\), \(Q\), and \(W\), indicate whether the variable is positive, negative, or zero for the process \(A \to B\) only. Justify your answer.
+		\end{enumerate}
+
+		\begin{itemize}
+			\item<2-> \(T_A = T_B\), so temperature is constant; \(\boxed{U = 0}\)
+			\item<3-> The gas expands (volume increases), so work is done by the system (it loses energy); \(\boxed{W \text{ is negative}}\)
+			\item<4-> Since \(U = 0\) and \(W\) is negative, \(\boxed{Q \text{ must be positive}}\) in order to balance out work
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Problem 13}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{2}
+			\item Determine how much work, if any, was done on the process \(A \to B\).
+		\end{enumerate}
+
+		\begin{align*}
+			\onslide<2->{W &= -\text{area under } A \to B \\}
+			\onslide<3->{W &= -\frac{\SI{5.0E5}{\pascal} + \SI{1.0E5}{\pascal}}{2}(\SI{0.050}{\meter^3} - \SI{0.010}{\meter^3}) \\}
+			\onslide<4->{\Aboxed{W &= \SI{-12000}{\joule}}}
+		\end{align*}
+	\end{frame}
+
+	\begin{frame}{Problem 13}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{3}
+			\item Determine how much heat, if any, was added to the gas in the process \(A \to B\).
+		\end{enumerate}
+
+		\begin{align*}
+			\onslide<2->{\Delta U &= Q + W \\}
+			\onslide<3->{Q &= -W \\}
+			\onslide<4->{\Aboxed{Q &= \SI{12000}{\joule}}}
+		\end{align*}
+	\end{frame}
+
+	\begin{frame}{Problem 13}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{4}
+			\item In the entire process \(A \to B \to C \to A\), was heat added or removed from the gas, or neither?
+		\end{enumerate}
+		
+		\begin{equation*}
+			\onslide<2->\boxed{\text{heat was added}}
+		\end{equation*}
+	\end{frame}
+\end{document}

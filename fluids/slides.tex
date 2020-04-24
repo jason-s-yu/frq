@@ -1,0 +1,98 @@
+% the sample slide is created with 16:9 aspect ratio
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{mathpazo}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[makeroom]{cancel}
+\usepackage{siunitx}
+
+\usetheme{saarland}
+
+% the background and logo are in the images directory
+\graphicspath{{figs/}}
+
+% information for the title page
+\author{Jason Yu}
+\title{AP Fluids Review}
+\subtitle{Worked problem 1}
+\institute{University HS}
+\date{\today}
+
+\begin{document}
+	\begin{frame}{Problem 1}
+		The large container shown in the cross section is filled with a liquid of density \SI{1.1E3}{\kilo\gram/\meter^3}. A small hole of area \SI{2.5E-6}{\meter^2} is opened in the side of the container a distance \(h\) below the liquid surface, which allows a stream of liquid to flow through the hole and into a beaker placed to the right of the container. At the same time, liquid is also added to the container at an appropriate rate so that \(h\) remains constant. The amount of liquid collected in the beaker in \SI{2.0}{\minute} is \SI{7.2E-4}{\meter^3}.
+		
+		\begin{enumerate}[a)]
+			\item Calculate the volume rate of flow of liquid from the hole in \si{\meter^3/\second}.
+			\item Calculate the speed of the liquid as it exits from the hole.
+			\item Calculate the height \(h\) of liquid needed above the hole to cause the speed you determined in part b.
+			\item Suppose that there is now less liquid in the container so that the height \(h\) is reduced to \(h/2\). In relation to the collection beaker, where will the liquid hit the tabletop?
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}{Problem 1}
+		\begin{enumerate}[a)]
+			\item Calculate the volume rate of flow of liquid from the hole in \si{\meter^3/\second}.
+		\end{enumerate}
+
+		\begin{align*}
+			\onslide<2->{Q &= \frac{V}{t} \tag{Volume flow rate} \\}
+			\onslide<3->{Q &= \frac{\SI{7.2E-4}{\meter^3}}{\SI{2.0}{\minute}} \times \frac{\SI{1.0}{\minute}}{\SI{60.0}{\second}} \\}
+			\onslide<4->{\Aboxed{Q &= \SI{6.0E-6}{\meter^3/\second}}}
+		\end{align*}
+	\end{frame}
+
+	\begin{frame}{Problem 1}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{1}
+			\item Calculate the speed of the liquid as it exits from the hole.
+		\end{enumerate}
+
+		\begin{align*}
+			\onslide<2->{Q &= Av \tag{Continuity/volume flow} \\}
+			\onslide<3->{v &= \frac{Q}{A} \\}
+			\onslide<4->{v &= \frac{\SI{6.0E-6}{\meter^3/\second}}{\SI{2.5E-6}{\meter^2}} \\}
+			\onslide<5->{\Aboxed{v &= \SI{2.4}{\meter/\second}}}
+		\end{align*}
+	\end{frame}
+
+	\begin{frame}{Problem 1}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{2}
+			\item Calculate the height \(h\) of liquid needed above the hole to cause the speed you determined in part b.
+		\end{enumerate}
+
+		\begin{align*}
+			\only<2>{P_1 + \frac{1}{2}\rho v_1^2 + \rho g h_1 &= P_2 + \frac{1}{2}\rho v_2^2 + \rho g h_2 \tag{Bernoulli's Equation} \\}
+			\only<3>{\cancel{P_1} + \frac{1}{2}\rho v_1^2 + \rho g h_1 &= \cancel{P_2} + \frac{1}{2}\rho v_2^2 + \rho g h_2 \tag{Bernoulli's Equation} \\}
+			\only<4>{\cancel{P_1} + \cancel{\frac{1}{2}\rho v_1^2} + \rho g h_1 &= \cancel{P_2} + \frac{1}{2}\rho v_2^2 + \rho g h_2 \tag{Bernoulli's Equation} \\}
+			\onslide<5->{\cancel{P_1} + \cancel{\frac{1}{2}\rho v_1^2} + \rho g h_1 &= \cancel{P_2} + \frac{1}{2}\rho v_2^2 + \cancel{\rho g h_2} \tag{Bernoulli's Equation} \\}
+			\onslide<6->{2\rho gh &= \rho v^2 \\}
+			\onslide<7->{h &= \frac{v^2}{2g} \\}
+			\onslide<8->{h &= \frac{\SI{2.4}{\meter/\second}}{2(\SI{9.80}{\meter/\second^2})} \\}
+			\onslide<9->{\Aboxed{h &= \SI{0.294}{\meter}}}
+		\end{align*}
+	\end{frame}
+	
+	\begin{frame}{Problem 1}
+		\begin{enumerate}[a)]
+			\setcounter{enumi}{3}
+			\item Suppose that there is now less liquid in the container so that the height \(h\) is reduced to \(h/2\). In relation to the collection beaker, where will the liquid hit the tabletop?
+		\end{enumerate}
+
+		\begin{align*}
+			\onslide<2->{2\rho gh &= \rho v^2 \\}
+			\onslide<3->{v &= \sqrt{2gh}}
+		\end{align*}
+
+		\begin{itemize}
+			\item<4-> Velocity is lower by factor of \(\sqrt{2}\)
+			\item<5-> Distance traveled must be lower
+		\end{itemize}
+
+		\begin{center}
+			\onslide<6->\alert{Left of the container}
+		\end{center}
+	\end{frame}
+\end{document}
